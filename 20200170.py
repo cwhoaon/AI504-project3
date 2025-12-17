@@ -442,7 +442,11 @@ def main():
     train_vlm(vlm, llava_loader, vlm_optimizer, 10, device)
     _, logits = test_vlm(vlm, test_llava_loader, device)
     
-    np.save('20200170.npy', logits)
+    
+    # get current folder path
+    current_folder = os.getcwd()
+    logits_filename = os.path.join(current_folder, '20200170.npy')
+    np.save(logits_filename, logits)
     
     
 

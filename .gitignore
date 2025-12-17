@@ -2,3 +2,4 @@
 data/
 *.npy
 instruct_tuning/*
+*.zip
